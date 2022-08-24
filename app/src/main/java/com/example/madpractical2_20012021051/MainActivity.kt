@@ -53,4 +53,15 @@ class MainActivity : AppCompatActivity() {
         ).show()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i(TAG, "onDestroy:onDestroy method is called ")
+        Toast.makeText(this,"onDestroy:onDestroy method is called",Toast.LENGTH_LONG).show()
+        Snackbar.make(
+            findViewById(R.id.myCoordinatorLayout),
+            R.string.id,
+            Snackbar.LENGTH_SHORT
+        ).show()
+    }
+
 }
